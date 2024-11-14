@@ -9,14 +9,14 @@ public class Player
     
     public Player(String name)
     {
-        Dice hp_die = new Dice(15);
-        Dice str_die = new Dice(4);
-        Dice ac_die = new Dice(12);
+        Dice hp_die = new Dice(16);
+        Dice str_die = new Dice(5);
+        Dice ac_die = new Dice(13);
 
         this.name = name;
-        this.hp = hp_die.roll()+15;
-        this.str = str_die.roll()+8;
-        this.ac = ac_die.roll()+5;   
+        this.hp = hp_die.roll()+14;
+        this.str = str_die.roll()+7;
+        this.ac = ac_die.roll()+4;
     }
     
     public void display()

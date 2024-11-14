@@ -7,6 +7,5 @@ public class Main
         Player n3 = new Player("Sluggerwort");
 
         System.out.println(n1+"\n"+n2+"\n"+n3);
-        n1.display();
     }
 }
