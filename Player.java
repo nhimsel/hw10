@@ -1,3 +1,5 @@
+
+
 public class Player
 {
     private String name;
@@ -7,11 +9,46 @@ public class Player
     
     public Player(String name)
     {
+        Dice hp_die = new Dice(15);
+        Dice str_die = new Dice(4);
+        Dice ac_die = new Dice(12);
+
         this.name = name;
-        
-        //now randomly set the other fields
-        //set the rest of the fields to the values described in the comment next to them
-        //hw
+        this.hp = hp_die.roll()+15;
+        this.str = str_die.roll()+8;
+        this.ac = ac_die.roll()+5;   
     }
     
+    public void display()
+    {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString()
+    {
+        if (this.name.length()<=5)
+        {
+            return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
+        }
+        else if (this.name.length()<=11)
+        {
+            return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
+        }
+        else if (this.name.length()<=15)
+        {
+            return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
+        }
+        else
+        {
+            String top = "";
+            String bottom = "";
+            for (int i=0; i<this.name.length()/2+1; i++)
+            {
+                top += " _";
+                bottom += " ‾";
+            }
+            return top+"\n| "+this.name+"\t   \n|\n| HP="+this.hp+"\t\t\t\n| STR="+this.str+"  \t\t\t\n| AC="+this.ac+"   \t\t\t\n|\n"+bottom;
+        }
+    }    
 }

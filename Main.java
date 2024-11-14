@@ -2,10 +2,11 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Dice d20 = new Dice(20);
-        Dice d10 = new Dice(10);
-        Dice d2 = new Dice(2);
+        Player n1 = new Player("Milky");
+        Player n2 = new Player("Lug");
+        Player n3 = new Player("Sluggerwort");
 
-        System.out.print(d2.roll());
+        System.out.println(n1+"\n"+n2+"\n"+n3);
+        n1.display();
     }
 }
