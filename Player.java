@@ -1,5 +1,3 @@
-
-
 public class Player
 {
     private String name;
@@ -27,23 +25,24 @@ public class Player
     @Override
     public String toString()
     {
+        String top = " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
+        String bottom = " ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
         if (this.name.length()<=5)
         {
-            return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
+            return top+"\n| "+this.name+"\t\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n"+bottom;
         }
         else if (this.name.length()<=13)
         {
-            return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
+            return top+"\n| "+this.name+"\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n"+bottom;
         }
         else if (this.name.length()<=21)
         {
-            return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
+            return top+"\n| "+this.name+"\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n"+bottom;
         }
         else
         {
-            String top = "";
-            String bottom = "";
-            for (int i=0; i<this.name.length()/2+1; i++)
+            top = ""; bottom = "";
+            for (int i=0; i<this.name.length()/2+2; i++)
             {
                 top += " _";
                 bottom += " ‾";
