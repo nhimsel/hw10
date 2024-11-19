@@ -31,11 +31,11 @@ public class Player
         {
             return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
         }
-        else if (this.name.length()<=11)
+        else if (this.name.length()<=13)
         {
             return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
         }
-        else if (this.name.length()<=15)
+        else if (this.name.length()<=21)
         {
             return " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n| "+this.name+"\t  HP="+this.hp+" |\n|\t\t\t\t|\n| STR="+this.str+"  \t\t\t|\n| AC="+this.ac+"   \t\t\t|\n|\t\t\t\t|\n ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
         }
