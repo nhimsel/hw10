@@ -29,24 +29,21 @@ public class Player
         String bottom = " ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾ ‾";
         if (this.name.length()<=5)
         {
-            return top+"\n| "+this.name+
-                "\t\t\t  HP="+this.hp+
+            return top+"\n| "+this.name+"\t\t\t  HP="+this.hp+
                 " |\n|\t\t\t\t|\n| STR="+this.str+
                 "  \t\t\t|\n| AC="+this.ac+
                 "   \t\t\t|\n|\t\t\t\t|\n"+bottom;
         }
         else if (this.name.length()<=13)
         {
-            return top+"\n| "+this.name+
-                "\t\t  HP="+this.hp+
+            return top+"\n| "+this.name+"\t\t  HP="+this.hp+
                 " |\n|\t\t\t\t|\n| STR="+this.str+
                 "  \t\t\t|\n| AC="+this.ac+
                 "   \t\t\t|\n|\t\t\t\t|\n"+bottom;
         }
         else if (this.name.length()<=21)
         {
-            return top+"\n| "+this.name+
-                "\t  HP="+this.hp+
+            return top+"\n| "+this.name+"\t  HP="+this.hp+
                 " |\n|\t\t\t\t|\n| STR="+this.str+
                 "  \t\t\t|\n| AC="+this.ac+
                 "   \t\t\t|\n|\t\t\t\t|\n"+bottom;
@@ -59,8 +56,7 @@ public class Player
                 top += " _";
                 bottom += " ‾";
             }
-            return top+"\n| "+this.name+
-                "\t   \n|\n| HP="+this.hp+
+            return top+"\n| "+this.name+"\t   \n|\n| HP="+this.hp+
                 "\t\t\t\n| STR="+this.str+
                 "  \t\t\t\n| AC="+this.ac+
                 "   \t\t\t\n|\n"+bottom;
